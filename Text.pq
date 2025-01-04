@@ -1,5 +1,5 @@
 let
-    源 = Excel.Workbook(File.Contents("D:\abcam\未完成单据\20250102 UK-7829741191505 - 7个 FTN\Abcam Commercial Invoice FTN-7829741191505+8180128231401+8180548231401-Items of AB145350-10.xlsx"), null, true),
+    源 = 发票路径,
     第一个Sheet = Table.SelectRows(源, each [Kind] = "Sheet"){0}[Data],
 
     删除右侧空白列 = 
